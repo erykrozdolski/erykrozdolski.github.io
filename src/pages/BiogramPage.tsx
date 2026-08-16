@@ -1,63 +1,67 @@
-import React from "react";
-import { useParams } from "react-router-dom";
-import biograms from "../biograms";
-import parse from "html-react-parser";
-import Breadcrumbs from "src/components/Breadcrumbs/Breadcrumbs";
+import { useParams } from 'react-router';
+import { biograms } from '../const';
+import { Breadcrumbs } from 'organisms';
+import { Container } from '../ui/atoms/Container/Container';
+import { BiogramList } from './BiogramList';
 
-const BiogramPage = () => {
-  const { id } = useParams();
-  const biogram = biograms[id];
-  const { surname, name, imagePath, video, role } = biogram;
+export const BiogramPage = () => {
+  const { id = '' } = useParams();
+  const biogram = biograms[id as keyof typeof biograms];
+  const { surname, name, role } = biogram;
   const lifeLabel = `[${biogram.birthdate}-${biogram.deathdate}]`;
+  const index = `${biogram.name}_${biogram.surname}`.toLowerCase();
   return (
-    <>
-      <div className="relative z-10 mb-8">
+    <Container>
+      <Breadcrumbs biogram={biogram} />
+
+      <div className="relative z-10">
         <div>
           <div className="bg-black absolute w-full h-full z-10 opacity-75"></div>
-          <div className="flex absolute z-20 lg:m-8 m-1">
-            <div className="px-4 text-white text-3xl md:text-5xl lg:text-8xl">
-              <p className="font-light">{biogram.name} </p>
-              <p className="font-black uppercase">{biogram.surname}</p>
-              <p className="text-2xl lg:text-5xl">{lifeLabel}</p>
+          <div className="flex absolute z-20">
+            <div className="text-white grid h-fit gap-4 md:m-8 m-4">
+              <div className="text-xl md:text-5xl lg:text-6xl mb-16 grid gap-2">
+                <p className="font-light">
+                  {biogram.name} <span className="font-black uppercase">{biogram.surname}</span>
+                </p>
+                <p className="md:text-xl text-xs">{role}</p>
+                <p className="md:text-xl text-xs">{lifeLabel}</p>
+              </div>
             </div>
+          </div>
+          <div className="absolute z-20 text-white grid h-fit gap-4 m-8 bottom-0 right-0">
+            <p className="text-xl">{biogram.address}</p>
           </div>
         </div>
         <video
           className="w-full relative h-90"
-          src={`${video}`}
+          src={`/assets/${index}/video.mp4`}
+          poster={`/assets/${index}/bg.jpeg`}
           autoPlay
           muted
           playsInline
         ></video>
       </div>
-      <Breadcrumbs biogram={biogram} />
-      <div className="grid grid-cols-12 gap-4 mt-8">
-        <div className="col-span-12 lg:col-span-3">
-          <img
-            className="border-2 border-white h-90"
-            alt={surname + name}
-            src={process.env.PUBLIC_URL + `${imagePath}`}
-          />
-          <p className=" text-2xl pt-2">
-            <span className="font-light">{biogram.name}</span>{" "}
-            <span className="font-black uppercase">{biogram.surname}</span>
-          </p>
-          <p className="text-sm ">{role}</p>
-          <p className="pt-2">{lifeLabel}</p>
+      <div className="mt-8 pb-16">
+        <p className="text-4xl lg:text-4xl mb-6">Życiorys</p>
+        <div className="w-full mb-6">
+          <div className="md:text-lg text-l pb-3 text-justify">{biogram.desc}</div>
         </div>
-        <div className="col-start-1 lg:col-start-5 md:col-end-12 col-end-13">
-          <p className="text-4xl lg:text-6xl mb-6">Życiorys</p>
-          {biogram.desc.map((paragraph, i) => (
-            <p
-              key={i}
-              className="md:text-lg text-l pb-3 text-justify text-slate-100"
-            >
-              {parse(paragraph)}
-            </p>
-          ))}
+        <div className="grid grid-cols-2 lg:flex gap-4 w-full">
+          <img
+            className="border-2 border-white lg:h-[500px] w-fit h-auto"
+            alt={surname + name}
+            src={`/assets/${index}/original.jpg`}
+          />
+          <img
+            className="border-2 border-white lg:h-[500px] w-fit h-auto"
+            alt={surname + name}
+            src={`/assets/${index}/stencil.jpg`}
+          />
         </div>
       </div>
-    </>
+      <p className="text-4xl lg:text-4xl mb-6">Inne szablony</p>
+      <BiogramList />
+    </Container>
   );
 };
 
