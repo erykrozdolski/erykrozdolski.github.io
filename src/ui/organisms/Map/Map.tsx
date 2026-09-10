@@ -36,23 +36,25 @@ export const Map = () => {
             key={fullName}
             icon={myIcon}
           >
-            <Popup maxWidth={500}>
-              <div className="grid grid-cols-4 min-w-[500px]">
-                <img
-                  src={`/assets/${index}/stencil.jpg`}
-                  alt={fullName}
-                  className="h-full w-auto col-span-auto "
-                />
-                <div className="grid gap-1 p-4 col-span-3">
-                  <div className="font-black my-0">{fullName}</div>
-                  <div className="font-sans text-sm">{lifeLabel}</div>
-                  <div className="font-sans text-sm">{role}</div>
-                  <NavLink to={`/biogram/${fullName}`}>
-                    <button className="text-white mt-2 text-sm w-full bg-green-400 hover:text-black uppercase border-2 hover:border-black px-4 py-2 hover:shadow-lg  transition-all ease-in-out font-bold">
+            <Popup>
+              <div className="grid w-[250px]">
+                <NavLink to={`/biogram/${fullName}`} className="text-black">
+                  <img
+                    src={`/assets/${index}/stencil.jpg`}
+                    alt={fullName}
+                    className="h-auto w-[250px] col-span-1"
+                  />
+                  <div className="p-4">
+                    <div className="font-black my-0 text-m text-black">
+                      {person?.name} {person?.surname}
+                    </div>
+                    <div className="text-sm text-black">{lifeLabel}</div>
+                    <div className="text-sm text-black">{role}</div>
+                    <button className="text-white mt-2 text-sm w-full bg-green-400 now hover:text-black uppercase border-2 hover:border-black px-4 py-2 hover:shadow-lg  transition-all ease-in-out font-bold">
                       Dowiedz się więcej
                     </button>
-                  </NavLink>
-                </div>
+                  </div>
+                </NavLink>
               </div>
             </Popup>
           </Marker>

@@ -1,12 +1,13 @@
 import { Routes, Route, Outlet } from 'react-router';
 import { BiogramList, NoPage, AboutPage, MapPage, BiogramPage, HomePage } from 'pages';
 import './index.scss';
-import { Navbar } from 'organisms';
+import { Navbar, ScrollToTop } from 'organisms';
 
 export const App = () => (
   <>
     <Outlet />
     <Navbar />
+    <ScrollToTop />
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/biogramy" element={<BiogramList />} />

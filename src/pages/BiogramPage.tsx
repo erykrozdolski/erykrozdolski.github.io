@@ -12,9 +12,7 @@ export const BiogramPage = () => {
   const index = `${biogram.name}_${biogram.surname}`.toLowerCase();
   return (
     <Container>
-      <Breadcrumbs biogram={biogram} />
-
-      <div className="relative z-10">
+      <div className="relative z-10 aspect-video">
         <div>
           <div className="bg-black absolute w-full h-full z-10 opacity-75"></div>
           <div className="flex absolute z-20">
@@ -35,12 +33,14 @@ export const BiogramPage = () => {
         <video
           className="w-full relative h-90"
           src={`/assets/${index}/video.mp4`}
-          poster={`/assets/${index}/bg.jpeg`}
+          {...(biogram.hasPoster && { poster: `/assets/${index}/bg.jpeg` })}
           autoPlay
           muted
           playsInline
         ></video>
       </div>
+      <Breadcrumbs biogram={biogram} />
+
       <div className="mt-8 pb-16">
         <p className="text-4xl lg:text-4xl mb-6">Życiorys</p>
         <div className="w-full mb-6">

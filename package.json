@@ -25,6 +25,7 @@
     "react-i18next": "^17.0.8",
     "react-leaflet": "^5.0.0-rc.2",
     "react-router": "^8.1.0",
+    "react-router-dom": "^7.18.2",
     "tailwind-merge": "^2.6.1",
     "vite-tsconfig-paths": "^4.3.2"
   },
