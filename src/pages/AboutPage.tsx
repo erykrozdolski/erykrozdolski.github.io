@@ -6,7 +6,7 @@ export const AboutPage = () => {
   const mediumTitle = 'text-3xl font-bold my-4';
   return (
     <Container>
-      <div className="text-justify mb-8">
+      <div className="text-justify mb-32">
         <iframe
           width="100%"
           src="https://www.youtube.com/embed/IdWoyn_0f7M"
@@ -21,6 +21,7 @@ export const AboutPage = () => {
             jednostkom, w historii naszej lokalnej społeczności, poprzez serię szablonów (technika
             graffiti).
           </p>
+          <hr className="py-4 mt-16" />
           <div className="py-2">
             <p className={mediumTitle}>Pamięć</p>
             <p className={paragraphClasses}>
@@ -39,6 +40,7 @@ export const AboutPage = () => {
               ludzi, edukować ich, prowadzić życie naukowe czy artystyczne.
             </p>
           </div>
+          <hr className="py-4 mt-16" />
           <div className="py-2">
             <p className={mediumTitle}>Edukacja</p>
             <p className={paragraphClasses}>
@@ -53,6 +55,7 @@ export const AboutPage = () => {
               malunkach.
             </p>
           </div>
+          <hr className="py-4 mt-16" />
           <div>
             <p className={mediumTitle}>Estetyka</p>
             <p className={paragraphClasses}>
@@ -68,18 +71,20 @@ export const AboutPage = () => {
           </div>
 
           <hr className="py-4 mt-16" />
-          <p className={`mt-6 ${mediumTitle}`}>Podziękowania</p>
+          <p className={`mt-6 ${mediumTitle} `}>Podziękowania</p>
           <p className={paragraphClasses}>
             Pierwszy mural powstał jesienią 2022. Dziękuję wszystkim sponsorom, którzy pomogli mi
-            sfinansować farby oraz tablice informacyjne.
+            sfinansować farby oraz tablice informacyjne. Dziękuję państwu{' '}
+            <b>
+              Małgorzacie i Cezaremu Grześkowiak, państwu Kindze i Damianowi Kozicy oraz mojemu
+              bratu Kacprowi Rozdolskiemu. Dziękuję panu Jackowi Kuropce
+            </b>{' '}
+            za pomoc w napisaniu i zredagowaniu tekstów biograficznych, oraz za dyskusje
+            historyczne. Dziękuję wszystkim, którzy zgodzili się żeby na murach, które do nich
+            należą znalazły szablony.
             <br></br>
-            <br></br>Dziękuję państwu Małgorzacie i Cezaremu Grześkowiak, państwu Kindze i Damianowi
-            Kozicy oraz mojemu bratu Kacprowi Rozdolskiemu. Dziękuję panu Jackowi Kuropce za pomoc w
-            napisaniu i zredagowaniu tekstów biograficznych, oraz za dyskusje historyczne. Dziękuję
-            wszystkim, którzy zgodzili się żeby na murach, które do nich należą znalazły szablony.
-            <br></br>
-            <br></br> Dziękuję swojej żonie Monice, za wsparcie które mi dała przez cały ten długi
-            czas realizacji projektu.Dzięki Wam Bralin jest odrobinę ciekawiej wyglądającą
+            <br></br> <b>Dziękuję swojej żonie Monice,</b> za wsparcie które mi dała przez cały ten
+            długi czas realizacji projektu. Dzięki Wam Bralin jest odrobinę ciekawiej wyglądającą
             miejscowością.
           </p>
         </div>

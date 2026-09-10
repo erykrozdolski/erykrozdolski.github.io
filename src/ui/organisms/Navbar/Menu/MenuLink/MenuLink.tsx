@@ -17,7 +17,14 @@ export const MenuLink = ({ className, to, label, onClick }: MenuLinkProps) => {
       isActive && 'border-bottom border-bottom-color-green-400 border-bottom-2',
     );
   return (
-    <NavLink to={to} className={linkClasses} onClick={onClick}>
+    <NavLink
+      to={to}
+      className={linkClasses}
+      onClick={onClick}
+      style={({ isActive }) =>
+        isActive ? { color: '#22c55e', borderBottom: '1px solid #22c55e' } : { color: '' }
+      }
+    >
       <ArrowRightIcon className="w-4 h-4 mr-2 sm:hidden fill-green-300" />
       {label}
     </NavLink>

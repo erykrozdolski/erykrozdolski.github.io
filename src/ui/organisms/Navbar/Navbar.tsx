@@ -8,7 +8,7 @@ export const Navbar = () => {
 
   return (
     <Container>
-      <div className="">
+      <div className="mb-4">
         <div className="flex justify-between">
           <div className="flex space-x-4">
             <div>

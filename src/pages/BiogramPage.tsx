@@ -17,17 +17,17 @@ export const BiogramPage = () => {
           <div className="bg-black absolute w-full h-full z-10 opacity-75"></div>
           <div className="flex absolute z-20">
             <div className="text-white grid h-fit gap-4 md:m-8 m-4">
-              <div className="text-xl md:text-5xl lg:text-6xl mb-16 grid gap-2">
-                <p className="font-light">
+              <div className="mb-16 grid gap-2">
+                <p className="font-light text-3xl md:text-5xl lg:text-6xl">
                   {biogram.name} <span className="font-black uppercase">{biogram.surname}</span>
                 </p>
-                <p className="md:text-xl text-xs">{role}</p>
-                <p className="md:text-xl text-xs">{lifeLabel}</p>
+                <p className="md:text-xl text-m">{role}</p>
+                <p className="md:text-xl text-m">{lifeLabel}</p>
               </div>
             </div>
           </div>
           <div className="absolute z-20 text-white grid h-fit gap-4 m-8 bottom-0 right-0">
-            <p className="text-xl">{biogram.address}</p>
+            <p className="md:text-xl text-xs">{biogram.address}</p>
           </div>
         </div>
         <video
@@ -46,7 +46,7 @@ export const BiogramPage = () => {
         <div className="w-full mb-6">
           <div className="md:text-lg text-l pb-3 text-justify">{biogram.desc}</div>
         </div>
-        <div className="grid grid-cols-2 lg:flex gap-4 w-full">
+        <div className="grid lg:grid-cols-2 grid-cols-2 lg:flex gap-4 w-full">
           <img
             className="border-2 border-white lg:h-[500px] w-fit h-auto"
             alt={surname + name}
