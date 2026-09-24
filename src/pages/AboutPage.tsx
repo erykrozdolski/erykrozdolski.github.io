@@ -13,15 +13,15 @@ export const AboutPage = () => {
           title="Szablony lokalne"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
-          className="mb-8 w-full aspect-video"
+          className="mb-8 md:w-full aspect-video md:ml-0 -ml-4 -mr-4 w-fit"
         ></iframe>
         <div className="">
-          <p className={`py-4 ${largeTitle}`}>
+          <p className={`py-0 md:py-4 ${largeTitle}`}>
             <b>Szablony LOKALne projekt</b>, który zakładał oddanie hołdu i szacunku wybitnym
             jednostkom, w historii naszej lokalnej społeczności, poprzez serię szablonów (technika
             graffiti).
           </p>
-          <hr className="py-4 mt-16" />
+          <hr className="py-4 mt-4 md:mt-16" />
           <div className="py-2">
             <p className={mediumTitle}>Pamięć</p>
             <p className={paragraphClasses}>
@@ -40,7 +40,7 @@ export const AboutPage = () => {
               ludzi, edukować ich, prowadzić życie naukowe czy artystyczne.
             </p>
           </div>
-          <hr className="py-4 mt-16" />
+          <hr className="py-4 mt-4 md:mt-16" />
           <div className="py-2">
             <p className={mediumTitle}>Edukacja</p>
             <p className={paragraphClasses}>
@@ -55,7 +55,7 @@ export const AboutPage = () => {
               malunkach.
             </p>
           </div>
-          <hr className="py-4 mt-16" />
+          <hr className="py-4 mt-4 md:mt-16" />
           <div>
             <p className={mediumTitle}>Estetyka</p>
             <p className={paragraphClasses}>
@@ -69,8 +69,7 @@ export const AboutPage = () => {
               pustych ścian, okażą się miłymi akcentami w krajobrazie Bralina.
             </p>
           </div>
-
-          <hr className="py-4 mt-16" />
+          <hr className="py-4 mt-4 md:mt-16" />
           <p className={`mt-6 ${mediumTitle} `}>Podziękowania</p>
           <p className={paragraphClasses}>
             Pierwszy mural powstał jesienią 2022. Dziękuję wszystkim sponsorom, którzy pomogli mi
@@ -86,6 +85,10 @@ export const AboutPage = () => {
             <br></br> <b>Dziękuję swojej żonie Monice,</b> za wsparcie które mi dała przez cały ten
             długi czas realizacji projektu. Dzięki Wam Bralin jest odrobinę ciekawiej wyglądającą
             miejscowością.
+          </p>
+          <hr className="py-4 mt-2 " />
+          <p className="text-xs">
+            <a href="https://paniekolegoprojekt.pl">Panie Kolego Projekt 2026</a>
           </p>
         </div>
       </div>

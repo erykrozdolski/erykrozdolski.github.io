@@ -9,7 +9,7 @@ export const HomePage = () => {
 
   return (
     <div className="text-justify">
-      <div className="h-screen overflow-hidden">
+      <div className="md:h-screen overflow-hidden h-[75vh]">
         <Map />
       </div>
       <div className="py-8">

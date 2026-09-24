@@ -8,7 +8,7 @@ export const Navbar = () => {
 
   return (
     <Container>
-      <div className="mb-4">
+      <div>
         <div className="flex justify-between">
           <div className="flex space-x-4">
             <div>
@@ -48,9 +48,11 @@ export const Navbar = () => {
       </div>
 
       <div
-        className={`bg-white grid text-black ${isMenuOpen ? '' : 'hidden'} md:hidden px-0 border-y py-2`}
+        className={`bg-white grid text-black ${isMenuOpen ? '' : 'hidden'} md:hidden border-y absolute z-[2000] h-full p-4 left-0 w-full`}
       >
-        <Menu toggleMenu={toggleMenu} />
+        <div className="h-fit gap-2 grid">
+          <Menu toggleMenu={toggleMenu} />
+        </div>
       </div>
     </Container>
   );
