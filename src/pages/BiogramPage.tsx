@@ -3,7 +3,6 @@ import { biograms } from '../const';
 import { Breadcrumbs } from 'organisms';
 import { Container } from '../ui/atoms/Container/Container';
 import { BiogramList } from './BiogramList';
-import { Loader } from '../ui/atoms/Loader/Loader';
 
 export const BiogramPage = () => {
   const { id = '' } = useParams();
