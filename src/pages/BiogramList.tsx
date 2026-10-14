@@ -1,19 +1,10 @@
-import React from "react";
-import biograms from "../biograms";
-import BiogramCard from "src/components/BiogramCard/BiogramCard";
+import { biograms } from '../const';
+import { BiogramCard } from 'organisms';
 
-const BiogramList = () => {
-  const biogramList = Object.entries(biograms);
-  return (
-    <div className="grid grid-flow-row md:grid-cols-4 sm:grid-cols-2 grid-cols-1 grid-rows gap-4">
-      {biogramList.map((data) => {
-        const [fullName, person] = data;
-        return (
-          <BiogramCard person={person} fullName={fullName} key={fullName} />
-        );
-      })}
-    </div>
-  );
-};
-
-export default BiogramList;
+export const BiogramList = () => (
+  <div className="grid grid-flow-row lg:grid-cols-5 md:grid-cols-4 grid-cols-2 grid-rows gap-4 mb-6">
+    {Object.entries(biograms).map(([key, data]) => (
+      <BiogramCard person={data} key={key} />
+    ))}
+  </div>
+);

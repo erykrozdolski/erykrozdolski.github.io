@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background: #fafafa;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  top: 6px;
+  right: 4px;
+  width: 32px;
+  height: 32px;
+  color: rgb(74 222 128);
+}
+
+.leaflet-marker-icon:hover {
+  border: 1px solid black;
+  transition: 1s all;
+}
+
+.leaflet-popup-content-wrapper {
+  background: rgb(74 222 128);
+  overflow: hidden;
+  color: black;
+  font-size: 1.5rem;
+  padding: unset;
+  margin: unset;
+  max-width: max-content;
+}
+
+.leaflet-popup-content {
+  margin: unset;
+  padding: unset;
+}
