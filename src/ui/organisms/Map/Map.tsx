@@ -37,13 +37,13 @@ export const Map = () => {
             icon={myIcon}
           >
             <Popup>
-              <div className="grid w-[250px]">
+              <div className="grid w-[250px] w-full">
                 <NavLink to={`/biogram/${fullName}`} className="text-black">
                   <div className="max-h-[250px] overflow-hidden">
                     <img
                       src={`/assets/${index}/stencil.jpg`}
                       alt={fullName}
-                      className="h-auto w-[250px] col-span-1"
+                      className="h-auto  w-full col-span-1"
                     />
                   </div>
                   <div className="p-4">

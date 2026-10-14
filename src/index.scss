@@ -11,7 +11,7 @@ html {
   right: 4px;
   width: 32px;
   height: 32px;
-  color: white;
+  color: rgb(74 222 128);
 }
 
 .leaflet-marker-icon:hover {
@@ -21,6 +21,7 @@ html {
 
 .leaflet-popup-content-wrapper {
   background: rgb(74 222 128);
+  overflow: hidden;
   color: black;
   font-size: 1.5rem;
   padding: unset;

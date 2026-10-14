@@ -12,10 +12,10 @@ export const BiogramPage = () => {
   const index = `${biogram.name}_${biogram.surname}`.toLowerCase();
   return (
     <Container>
-      <div className="relative z-10 md:aspect-video aspect-[9/16] overflow-hidden">
+      <div className="relative z-10 md:aspect-video aspect-[16/9] overflow-hidden -mx-4 md:mx-0">
         <div>
-          <div className="bg-black absolute w-full h-full z-10 opacity-full md:opacity-75"></div>
-          <div className="flex absolute z-20">
+          <div className="bg-black absolute w-full h-full opacity-75 z-[1000]"></div>
+          <div className="flex absolute z-[1000]">
             <div className="text-white grid h-fit gap-4 md:m-8 m-4 ease-in-out transition-all animate-fadeIn">
               <div className="mb-16 grid gap-1">
                 <p className="font-light text-3xl md:text-5xl lg:text-6xl">
@@ -26,12 +26,12 @@ export const BiogramPage = () => {
               </div>
             </div>
           </div>
-          <div className="absolute z-20 text-white grid h-fit gap-4 m-4 md:m-8 bottom-0 right-0">
+          <div className="absolute z-20 text-white grid h-fit gap-4 m-4 md:m-8 bottom-0 right-0 z-[1000]">
             <p className="md:text-xl text-xs">{biogram.address}</p>
           </div>
         </div>
         <video
-          className="w-full relative md:h-90 h-full md:z-0 z-[20] ease-in-out transition-all animate-fadeIn"
+          className="w-full relative md:h-90 h-full  md:z-0 z-[20] ease-in-out transition-all animate-fadeIn"
           src={`/assets/${index}/video.mp4`}
           {...(biogram.hasPoster && { poster: `/assets/${index}/bg.jpeg` })}
           preload="auto"
@@ -47,14 +47,14 @@ export const BiogramPage = () => {
         <div className="w-full mb-6">
           <div className="md:text-lg text-l pb-3 text-justify">{biogram.desc}</div>
         </div>
-        <div className="grid lg:grid-cols-2 grid-cols-2 lg:flex gap-4 w-full">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 w-full">
           <img
-            className="border-2 border-white lg:h-[500px] w-fit h-auto"
+            className="border-2 border-white  "
             alt={surname + name}
             src={`/assets/${index}/original.jpg`}
           />
           <img
-            className="border-2 border-white lg:h-[500px] w-fit h-auto"
+            className="border-2 border-white h-auto "
             alt={surname + name}
             src={`/assets/${index}/stencil.jpg`}
           />

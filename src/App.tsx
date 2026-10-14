@@ -3,6 +3,7 @@ import { BiogramList, NoPage, AboutPage, MapPage, BiogramPage, HomePage } from '
 import './index.scss';
 import { Navbar, ScrollToTop } from 'organisms';
 import { Container } from './ui/atoms/Container/Container';
+import { Footer } from 'molecules';
 
 export const App = () => (
   <>
@@ -24,5 +25,6 @@ export const App = () => (
       <Route path="/mapa" element={<MapPage />} />
       <Route path="*" element={<NoPage />} />
     </Routes>
+    <Footer />
   </>
 );

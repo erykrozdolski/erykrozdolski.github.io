@@ -1,4 +1,5 @@
 import { Container } from '../ui/atoms/Container/Container';
+import { Footer } from '../ui/molecules/Footer/Footer';
 
 export const AboutPage = () => {
   const paragraphClasses = `lg:text-xl md:text-m text-s`;
@@ -85,10 +86,6 @@ export const AboutPage = () => {
             <br></br> <b>Dziękuję swojej żonie Monice,</b> za wsparcie które mi dała przez cały ten
             długi czas realizacji projektu. Dzięki Wam Bralin jest odrobinę ciekawiej wyglądającą
             miejscowością.
-          </p>
-          <hr className="py-4 mt-2 " />
-          <p className="text-xs">
-            <a href="https://paniekolegoprojekt.pl">Panie Kolego Projekt 2026</a>
           </p>
         </div>
       </div>

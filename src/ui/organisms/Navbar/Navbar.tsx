@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useLockBodyScroll } from '../../../hooks/useScrollbarLock';
 import { NavLink } from 'react-router';
 import { Menu } from './Menu/Menu';
 import { Container } from '../../atoms/Container/Container';
@@ -6,6 +7,7 @@ import { Container } from '../../atoms/Container/Container';
 export const Navbar = () => {
   const [isMenuOpen, toggleMenu] = useState(false);
 
+  useLockBodyScroll(isMenuOpen);
   return (
     <Container>
       <div>
@@ -26,7 +28,7 @@ export const Navbar = () => {
 
           <div className="hidden sm:flex items-center space-x-1"></div>
 
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center scrollbar-none">
             <button onClick={() => toggleMenu(!isMenuOpen)} className="mobile-menu-button">
               <svg
                 className="w-6 h-6"
