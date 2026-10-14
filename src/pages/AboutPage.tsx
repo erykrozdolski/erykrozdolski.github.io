@@ -1,5 +1,4 @@
 import { Container } from '../ui/atoms/Container/Container';
-import { Footer } from '../ui/molecules/Footer/Footer';
 
 export const AboutPage = () => {
   const paragraphClasses = `lg:text-xl md:text-m text-s`;
