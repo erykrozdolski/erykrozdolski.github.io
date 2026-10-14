@@ -4,6 +4,7 @@ export const AboutPage = () => {
   const paragraphClasses = `lg:text-xl md:text-m text-s`;
   const largeTitle = 'md:text-4xl text-2xl font-bold my-4 ';
   const mediumTitle = 'text-3xl font-bold my-4';
+  const Divider = () => <hr className="mb-4 md:mb-12 mt-2" />;
   return (
     <Container>
       <div className="text-justify mb-32">
@@ -21,7 +22,7 @@ export const AboutPage = () => {
             jednostkom, w historii naszej lokalnej społeczności, poprzez serię szablonów (technika
             graffiti).
           </p>
-          <hr className="py-4 mt-4 md:mt-16" />
+          <Divider />
           <div className="py-2">
             <p className={mediumTitle}>Pamięć</p>
             <p className={paragraphClasses}>
@@ -40,7 +41,7 @@ export const AboutPage = () => {
               ludzi, edukować ich, prowadzić życie naukowe czy artystyczne.
             </p>
           </div>
-          <hr className="py-4 mt-4 md:mt-16" />
+          <Divider />
           <div className="py-2">
             <p className={mediumTitle}>Edukacja</p>
             <p className={paragraphClasses}>
@@ -55,7 +56,7 @@ export const AboutPage = () => {
               malunkach.
             </p>
           </div>
-          <hr className="py-4 mt-4 md:mt-16" />
+          <Divider />
           <div>
             <p className={mediumTitle}>Estetyka</p>
             <p className={paragraphClasses}>
@@ -69,7 +70,7 @@ export const AboutPage = () => {
               pustych ścian, okażą się miłymi akcentami w krajobrazie Bralina.
             </p>
           </div>
-          <hr className="py-4 mt-4 md:mt-16" />
+          <Divider />
           <p className={`mt-6 ${mediumTitle} `}>Podziękowania</p>
           <p className={paragraphClasses}>
             Pierwszy mural powstał jesienią 2022. Dziękuję wszystkim sponsorom, którzy pomogli mi

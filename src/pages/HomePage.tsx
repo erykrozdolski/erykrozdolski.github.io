@@ -19,9 +19,10 @@ export const HomePage = () => {
             <p className={paragraphClass}>
               <Indent />
               Spoglądając na mapę wszystkich murali, łatwo jest zaplanować sobie trasę spacerową lub
-              rowerową, w której możemy zobaczyć wszystkie szablony. Lokalizacja wielu z nich jest
-              nieprzypadkowa. <Link to={`/biogram/Jan_Rybark`}>Hanys Rybark</Link> z zadumą spogląda
-              na swój dom rodzinny na ulicy 3 maja,{' '}
+              rowerową, w której możemy zobaczyć wszystkie szablony.{' '}
+              <b>Lokalizacja wielu z nich jest nieprzypadkowa.</b>{' '}
+              <Link to={`/biogram/Jan_Rybark`}>Hanys Rybark</Link> z zadumą spogląda na swój dom
+              rodzinny na ulicy 3 maja,{' '}
               <Link to={`/biogram/Melchior_Grossek`}>Melchior Grossek</Link> również znajduje się
               niedaleko swojego domu na Wrocławskiej, a jego brat{' '}
               <Link to={`/biogram/Stanisław_Grossek`}>Stanisław</Link> patrzy w kierunku ulicy Braci
@@ -29,10 +30,10 @@ export const HomePage = () => {
             </p>
             <p className={paragraphClass}>
               <Indent />
-              Spacery polecam rozpocząć od "starego" Bralina i Hanysa Rybarka, czyli ulicy 3-maja,
-              później zobaczyć obrazy Melchiora na budynku starej bralińskiej gospody. Następnie
-              ulicą Krętą (<Link to={`/biogram/Stanisław_Kutzner`}>Kutzner</Link>) i Spokojną
-              przejść na ulicę Ogrodową (
+              <b>Spacery polecam rozpocząć od "starego" Bralina</b> i Hanysa Rybarka, czyli ulicy
+              3-maja, później zobaczyć obrazy Melchiora na budynku starej bralińskiej gospody.
+              Następnie ulicą Krętą (<Link to={`/biogram/Stanisław_Kutzner`}>Kutzner</Link>) i
+              Spokojną przejść na ulicę Ogrodową (
               <Link to={`/biogram/Stefan_Wojciechowski`}>ks. Wojciechowski</Link>), skręcić na Nową
               (<Link to={`/biogram/Antoni_Gabriel`}>Antoni Gabriel</Link>,{' '}
               <Link to={`/biogram/Bolesław_Płókarz`}>Bolesław Płókarz</Link>), odbić jeszcze na

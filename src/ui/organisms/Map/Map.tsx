@@ -5,15 +5,16 @@ import { Popup } from 'react-leaflet/Popup';
 import { biograms } from '../../../const';
 import { NavLink } from 'react-router';
 import L from 'leaflet';
+import { useIsMobile } from '../../../hooks/useIsMobile';
 
 export const Map = () => {
   const biogramList = Object.entries(biograms);
-
+  const isMobile = useIsMobile();
   return (
     <MapContainer
       className="h-full w-full"
       center={[51.2857, 17.9064]}
-      zoom={17}
+      zoom={isMobile ? 15 : 17}
       scrollWheelZoom={false}
     >
       <TileLayer

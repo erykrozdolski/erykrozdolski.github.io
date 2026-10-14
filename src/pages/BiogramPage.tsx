@@ -14,7 +14,7 @@ export const BiogramPage = () => {
     <Container>
       <div className="relative z-10 md:aspect-video aspect-[16/9] overflow-hidden -mx-4 md:mx-0">
         <div>
-          <div className="bg-black absolute w-full h-full opacity-75 z-[1000]"></div>
+          <div className="bg-black absolute w-full h-full opacity-75 z-[1000] transition-all"></div>
           <div className="flex absolute z-[1000]">
             <div className="text-white grid h-fit gap-4 md:m-8 m-4 ease-in-out transition-all animate-fadeIn">
               <div className="mb-16 grid gap-1">
@@ -26,13 +26,13 @@ export const BiogramPage = () => {
               </div>
             </div>
           </div>
-          <div className="absolute z-20 text-white grid h-fit gap-4 m-4 md:m-8 bottom-0 right-0 z-[1000]">
+          <div className="absolute text-white grid h-fit gap-4 m-4 md:m-8 bottom-0 right-0 z-[1000]">
             <p className="md:text-xl text-xs">{biogram.address}</p>
           </div>
         </div>
         <video
           className="w-full relative md:h-90 h-full  md:z-0 z-[20] ease-in-out transition-all animate-fadeIn"
-          src={`/assets/${index}/video.mp4`}
+          src={`/assets/${index}/video.webm`}
           {...(biogram.hasPoster && { poster: `/assets/${index}/bg.jpeg` })}
           preload="auto"
           autoPlay
